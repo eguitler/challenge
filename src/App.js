@@ -13,14 +13,16 @@ import {
 } from './pages';
 
 const App = () => (
-  <BrowserRouter>
-    <GlobalStyle />
-    <Routes>
-      <Route element={<Home />} path='/' />
-      <Route element={<Movie />} path='/movie/:id' />
-      <Route element={<NotFound />} path='/' />
-    </Routes>
-  </BrowserRouter>
+  <ThemeProvider theme={theme}>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Routes>
+        <Route element={<Home />} path='/' />
+        <Route element={<Movie />} path='/movie/:id' />
+        <Route element={<NotFound />} path='/' />
+      </Routes>
+    </BrowserRouter>
+  </ThemeProvider>
 );
 
 export default App;
