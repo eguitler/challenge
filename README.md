@@ -1,5 +1,5 @@
 [![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=paisaflix)](https://paisaflix-eg.vercel.app)
-# Pasaflix 
+# Paisaflix
 
 Challenge provided by Paisanos to apply as Ssr. Frontend Dev at Flixxo.
 
