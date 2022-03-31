@@ -1,4 +1,3 @@
-
 const App = () => (
   <main>Paisaflix</main>
 );
