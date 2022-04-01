@@ -6,7 +6,7 @@ export const Container = styled.div`
   right: 0;
   z-index: 10;
   height: 100%;
-  `;
+`;
 
 export const Overlay = styled.div`
   --bg: ${({ theme }) => theme.colors.contrast};
@@ -22,5 +22,6 @@ export const Overlay = styled.div`
 `;
 
 export const Image = styled.img`
-  height: 100%;
+  max-height: 100%;
+  width: 100%;
 `;
