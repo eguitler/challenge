@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: fit-content;
   position: absolute;
   right: 0;
-  z-index: 10;
+  z-index: -1;
   height: 100%;
 `;
 
