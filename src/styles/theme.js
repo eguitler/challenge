@@ -1,4 +1,7 @@
 const theme = {
+  layout: {
+    margin_sides: '100px',
+  },
   colors: {
     primary: '#FED530',
     secondary: '#FFFFFF',
@@ -18,8 +21,8 @@ const theme = {
     size: {
       small: '14px',
       normal: '16px',
-      semi_large: '24px',
-      large: '32px',
+      large: '24px',
+      huge: '32px',
       card_title: '36px',
       section_title: '48px',
       footer_title: '64px',
