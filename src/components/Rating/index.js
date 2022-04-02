@@ -3,7 +3,7 @@ import React from 'react';
 import RatingStar from '../RatingStar';
 import { Container } from './styles';
 
-const Rating = ({ value = 3.5, limit = 5 }) => {
+const Rating = ({ value = 0, limit = 5 }) => {
 
   let checkedValue = value > limit ? limit : value;
   checkedValue = value < 0 ? 0 : checkedValue;
