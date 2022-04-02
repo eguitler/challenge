@@ -13,10 +13,9 @@ import Rating from '../Rating';
 import { durationMinToHours } from '../../utils/time';
 
 /**
- * Hero used in Home and Movie
- * @param {string} img - image path
+ * Hero used in Home and Movie pages
  */
-const Hero = ({ children: trailers, movie }) => {
+const Hero = ({ movie }) => {
 
   const {
     _id: id,
@@ -31,7 +30,7 @@ const Hero = ({ children: trailers, movie }) => {
 
   return (
     <Container>
-      <HeroImage alt='' src={coverImage} />
+      <HeroImage alt={name} src={coverImage} />
       <Content>
         <Title>{name}</Title>
         <Rating value={rating} />
@@ -44,16 +43,11 @@ const Hero = ({ children: trailers, movie }) => {
         <Information>{`Duration: ${duration}`}</Information>
         <Information>{`Rating: ${rating}`}</Information>
         <HeroButton>Watch Now</HeroButton>
-        <div>
-          {trailers}
-        </div>
       </Content>
     </Container>
   );
 };
 
-Hero.propTypes = {
-  img: PropTypes.string.isRequired,
-};
+Hero.propTypes = {};
 
 export default Hero;

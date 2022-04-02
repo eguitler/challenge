@@ -2,15 +2,12 @@ import styled from 'styled-components';
 import Button from '../Button';
 
 export const Container = styled.section`
-  height: 100vh;
   width: 100%;
-  /* border: 3px solid red; */
 `;
 
 export const Content = styled.article`
   width: fit-content;
-  /* border: 3px solid yellow; */
-  margin: 12rem ${({ theme }) => theme.layout.margin_sides};
+  margin: 12rem ${({ theme }) => theme.layout.margin_sides} 0;
 `;
 
 export const Title = styled.h1`
@@ -33,8 +30,5 @@ export const Information = styled.p`
 `;
 
 export const HeroButton = styled(Button)`
-  // font-size: ${({ theme }) => theme.fonts.size.normal};
-  /* font-weight: ${({ theme }) => theme.fonts.weight.medium}; */
   margin: 2rem 0;
-
 `;
