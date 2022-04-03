@@ -13,6 +13,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.family};
     font-weight: ${({ theme }) => theme.fonts.weight.regular};
     color: white;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
   }
 
   a {
