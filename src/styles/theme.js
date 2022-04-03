@@ -1,6 +1,6 @@
 const theme = {
   layout: {
-    margin_sides: '100px',
+    margin_sides: '16rem',
   },
   colors: {
     primary: '#FED530',
@@ -14,9 +14,9 @@ const theme = {
   fonts: {
     family: 'DM Sans',
     weight: {
-      bold: 700,
-      medium: 500,
-      regular: 400,
+      bold: '700',
+      medium: '500',
+      regular: '400',
     },
     size: {
       small: '14px',
