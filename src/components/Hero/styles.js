@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import Button from '../Button';
+import Section from '../Section';
 
-export const Container = styled.section`
+export const Container = styled.div`
+  position: relative;
   width: 100%;
 `;
 
-export const Content = styled.article`
-  width: fit-content;
-  margin: 12rem ${({ theme }) => theme.layout.margin_sides} 0;
+export const HeroSection = styled(Section)`
+  padding-top: 10rem;
 `;
 
 export const Title = styled.h1`
@@ -18,10 +19,11 @@ export const Title = styled.h1`
 export const Description = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.normal};
   font-weight: ${({ theme }) => theme.fonts.weight.regular};
-  width: 25rem;
+  width: 100%;
+  max-width: 25rem;
   line-height: 32px;
   margin: 3rem 0;
-  `;
+`;
 
 export const Information = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.normal};

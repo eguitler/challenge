@@ -5,12 +5,14 @@ import {
   Content,
   Description,
   HeroButton,
+  HeroSection,
   Information,
   Title,
 } from './styles';
 import HeroImage from '../HeroImage';
 import Rating from '../Rating';
 import { durationMinToHours } from '../../utils/time';
+import Section from '../Section';
 
 /**
  * Hero used in Home and Movie pages
@@ -30,8 +32,8 @@ const Hero = ({ movie }) => {
 
   return (
     <Container>
-      <HeroImage alt={name} src={coverImage} />
-      <Content>
+      <HeroSection>
+        <HeroImage alt={name} src={coverImage} />
         <Title>{name}</Title>
         <Rating value={rating} />
         <Description>
@@ -43,7 +45,7 @@ const Hero = ({ movie }) => {
         <Information>{`Duration: ${duration}`}</Information>
         <Information>{`Rating: ${rating}`}</Information>
         <HeroButton>Watch Now</HeroButton>
-      </Content>
+      </HeroSection>
     </Container>
   );
 };
