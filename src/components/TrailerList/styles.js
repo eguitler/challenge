@@ -34,8 +34,10 @@ export const PaginationWrapper = styled.div`
       height: .5rem;
       border-radius: 2px;
       margin-left: 5px;
+      margin-right: 0;
       background-color: ${({ theme }) => theme.colors.secondary};
       opacity: .5;
+      cursor: pointer;
     }
     
     .swiper-pagination-bullet-active {
