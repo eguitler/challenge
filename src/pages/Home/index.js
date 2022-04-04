@@ -1,6 +1,8 @@
 import React from 'react';
-import { Hero } from '../../components';
-import TrailerList from '../../components/TrailerList';
+import {
+  Hero,
+  TrailerList,
+} from '../../components';
 
 const Home = () => {
 
