@@ -13,20 +13,20 @@ export const Container = styled.div`
 export const Overlay = styled.div`
   --bg: ${({ theme }) => theme.colors.contrast};
   --left_gradient: 90deg, var(--bg) 2%, rgba(255,255,255,0) 50%;
-  --right_gradient: 0deg, var(--bg) 4%, rgba(255,255,255,0) 25%;
+  --bottom_gradient: 0deg, var(--bg) 24%, rgba(255,255,255,0) 50%;
 
   position: absolute;
   width: 100%;
   height: 100%;
   background: var(--bg);
   background: -moz-linear-gradient(var(--left_gradient)),
-              -moz-linear-gradient(var(--right_gradient));
+              -moz-linear-gradient(var(--bottom_gradient));
 
   background: -webkit-linear-gradient(var(--left_gradient)),
-              -webkit-linear-gradient(var(--right_gradient));
+              -webkit-linear-gradient(var(--bottom_gradient));
 
   background: linear-gradient(var(--left_gradient)),
-              linear-gradient(var(--right_gradient));
+              linear-gradient(var(--bottom_gradient));
 `;
 
 export const Image = styled.img`
