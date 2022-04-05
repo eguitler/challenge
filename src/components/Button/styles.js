@@ -34,6 +34,7 @@ const applySize = (theme, size) => {
       return css`
         font-size: ${fonts.size.small};
         font-weight: ${fonts.weight.bold};
+        padding: 0 .7rem;
       `;
 
     case 'medium':
