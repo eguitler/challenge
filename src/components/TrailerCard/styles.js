@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { PLAY } from '../../assets';
+import Overlay from '../Overlay';
 
 export const Container = styled.article`
   width: 100%;
@@ -14,20 +15,7 @@ export const Img = styled.img`
   width: 100%;
 `;
 
-export const Overlay = styled.div`
-  --bg: ${({ theme }) => theme.colors.contrast};
-  --bottom_gradient: 0deg, var(--bg) -2%, rgba(255,255,255,0) 60%;
-
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-
-  background: -moz-linear-gradient(var(--bottom_gradient));
-  background: -webkit-linear-gradient(var(--bottom_gradient));
-  background: linear-gradient(var(--bottom_gradient));
-  opacity: 1;
-
+export const CardOverlay = styled(Overlay)`
   &::after {
     content: '';
     width: 100%;
@@ -41,7 +29,7 @@ export const Overlay = styled.div`
     transition: all 200ms ease;
   }
 
-  :hover::after {
+  &:hover::after {
       opacity: 1;
   }
 `;
@@ -51,7 +39,7 @@ export const Number = styled.article`
   z-index: 1;
   top: 84%;
   right: 1rem;
-  font-size: 32px;
-  font-weight: bold;
+  font-size: ${({ theme }) => theme.fonts.size.huge};
+  font-weight: ${({ theme }) => theme.fonts.weight.bold};
   color: white;
 `;

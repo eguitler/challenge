@@ -1,9 +1,9 @@
 import React from 'react';
 import {
+  CardOverlay,
   Container,
-  Number,
-  Overlay,
   Img,
+  Number,
 } from './styles';
 
 const TrailerCard = ({ img, alt, order: number }) => {
@@ -13,7 +13,7 @@ const TrailerCard = ({ img, alt, order: number }) => {
 
   return (
     <Container>
-      <Overlay />
+      <CardOverlay degree={0} end={50} start={0} />
       <Img alt={alt} src={img} />
       <Number>{order}</Number>
     </Container>

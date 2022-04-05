@@ -1,13 +1,14 @@
 import React from 'react';
+import Overlay from '../Overlay';
 import {
   Container,
   Image,
-  Overlay,
 } from './styles';
 
 const HeroImage = ({ src, alt }) => (
   <Container>
-    <Overlay />
+    <Overlay degree={90} end={50} start={2} />
+    <Overlay degree={0} end={50} start={24} />
     <Image alt={alt} src={src} />
   </Container>
 );
