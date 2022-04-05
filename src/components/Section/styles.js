@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const SectionStyled = styled.section(
-  ({ theme, mTop, mBottom }) => ({
-    margin: '0 auto',
-    'margin-top': mTop,
-    'margin-bottom': mBottom,
-    // border: '1px solid #333',
-    width: '80%',
-    padding: '0 2rem',
-  }),
-);
+export const SectionStyled = styled.section`
+  margin: 0 auto;
+  margin-top: ${({ mTop }) => mTop};
+  margin-bottom: ${({ mBottom }) => mBottom};
+  width: 80%;
+  padding: 0 2rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile_xl}) {
+    width: 100%;
+  }
+`;
 
