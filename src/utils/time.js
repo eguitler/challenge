@@ -5,5 +5,5 @@ export const durationMinToHours = (min) => {
   if (hours === 0) return `${min} min`;
   if (minutes === 0) return `${hours} hr`;
 
-  return `${hours} hs ${minutes} min`;
+  return `${hours} hs ${minutes} mins`;
 };
