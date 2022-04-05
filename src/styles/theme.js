@@ -1,6 +1,9 @@
 const theme = {
   layout: {
     margin_sides: '16rem',
+    breakpoints: {
+      mobile_xl: '800px',
+    },
   },
   colors: {
     primary: '#FED530',
@@ -10,6 +13,7 @@ const theme = {
     text_secondary: '#E6E6E6',
     text_contrast: '#2E2E2E',
     low_contrast: '#AAAAB6',
+    text_in_field: '#CCCCCC',
   },
   fonts: {
     family: 'DM Sans',
