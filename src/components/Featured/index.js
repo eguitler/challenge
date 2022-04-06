@@ -8,12 +8,19 @@ import {
   FeaturedSection,
 } from './styles';
 
-const INPUT_STYLES = {
+const Featured = ({ movies = [], isError }) => {
 
-};
 
-const Featured = ({ movies = [] }) => {
-  console.log('asdasd');
+  if (isError) {
+    return (
+      <FeaturedSection>
+        <Title>Featured</Title>
+        Oops! Something went wrong and this section
+        was not load correctly. Please try again.
+      </FeaturedSection>
+    );
+  }
+
   return (
     <FeaturedSection>
       <TextWrapper>

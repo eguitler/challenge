@@ -13,18 +13,22 @@ export const TextWrapper = styled.div`
   margin-bottom: 1rem;
 `;
 
-export const Title = styled.h2(
-  ({ theme }) => ({
-    'font-size': theme.fonts.size.section_title,
-  }),
-);
+export const Title = styled.h2`
+  font-size: ${({ theme }) => theme.fonts.size.section_title};
 
-export const ViewMore = styled.a(
-  ({ theme }) => ({
-    'font-size': theme.fonts.size.large,
-    color: theme.colors.primary,
-  }),
-);
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fonts.size.huge};
+  }
+`;
+
+export const ViewMore = styled.a`
+  font-size: ${({ theme }) => theme.fonts.size.large};
+  color: ${({ theme }) => theme.colors.primary};
+
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile}) {
+    font-size: ${({ theme }) => theme.fonts.size.normal};
+  }
+`;
 
 export const MoviesGrid = styled.div`
   /* border: 1px solid yellow; */
