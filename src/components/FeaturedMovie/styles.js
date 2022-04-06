@@ -31,11 +31,20 @@ export const Information = styled.div`
   margin-right: 2rem;
   font-size: ${({ theme }) => theme.fonts.size.small};
   color: ${({ theme }) => theme.colors.text_in_field};
+
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile_sm}) {
+    display: flex;
+    margin-bottom: .5rem;
+  }
 `;
 
 export const Title = styled.h3`
   font-size: ${({ theme }) => theme.fonts.size.card_title};
   margin-bottom: .5rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile_sm}) {
+    font-size: ${({ theme }) => theme.fonts.size.huge};
+  }
 `;
 
 export const Genre = styled(Button)`
