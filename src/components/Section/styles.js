@@ -7,8 +7,7 @@ export const SectionStyled = styled.section`
   width: 80%;
   padding: 0 2rem;
 
-  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile_xl}) {
+  @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.tablet_sm}) {
     width: 100%;
   }
 `;
-

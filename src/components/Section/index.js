@@ -6,8 +6,9 @@ const Section = ({
   mTop,
   mBottom,
   className,
+  as,
 }) => (
-  <SectionStyled className={className} mBottom={mBottom} mTop={mTop}>
+  <SectionStyled as={as} className={className} mBottom={mBottom} mTop={mTop}>
     {children}
   </SectionStyled>
 );
