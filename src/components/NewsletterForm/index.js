@@ -20,6 +20,7 @@ const NewsletterForm = () => {
 
   const closeModal = () => {
     modalRef.current.close();
+    setEmail('');
   };
 
   const handleSubmit = (ev) => {
@@ -27,7 +28,6 @@ const NewsletterForm = () => {
 
     if (!email) return;
     modalRef.current.open();
-    setEmail('');
   };
 
   return (
@@ -45,7 +45,7 @@ const NewsletterForm = () => {
       </Form>
 
       <Modal ref={modalRef}>
-        {`Thanks for suscribing! \nWe sent you an email to ${email}`}
+        {`Thanks for suscribing! \nWe sent you an email to: \n${email}`}
         <Button
           size='medium'
           onClick={closeModal}
