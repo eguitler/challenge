@@ -1,28 +1,48 @@
-import { ThemeProvider } from 'styled-components';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query';
 import {
   BrowserRouter,
   Route,
   Routes,
 } from 'react-router-dom';
-import GlobalStyle from './styles/global';
-import theme from './styles/theme';
+import { ThemeProvider } from 'styled-components';
+import { Layout } from './components';
 import {
   Home,
   Movie,
   NotFound,
 } from './pages';
+import {
+  GlobalStyle,
+  theme,
+} from './styles';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 30000,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 const App = () => (
-  <ThemeProvider theme={theme}>
-    <BrowserRouter>
-      <GlobalStyle />
-      <Routes>
-        <Route element={<Home />} path='/' />
-        <Route element={<Movie />} path='/movie/:id' />
-        <Route element={<NotFound />} path='*' />
-      </Routes>
-    </BrowserRouter>
-  </ThemeProvider>
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Layout>
+          <Routes>
+            <Route element={<Home />} path='/' />
+            <Route element={<Movie />} path='/movie/:id' />
+            <Route element={<NotFound />} path='*' />
+          </Routes>
+        </Layout>
+      </BrowserRouter>
+    </ThemeProvider>
+  </QueryClientProvider>
 );
 
 export default App;
