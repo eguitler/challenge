@@ -9,20 +9,19 @@ const Button = ({
   onClick,
   className,
   children,
-}) => {
-  console.log('asd');
-  return (
-    <ButtonStyled
-      className={className}
-      name={name}
-      shape={shape}
-      size={size}
-      variant={variant}
-      onClick={onClick}
-    >
-      {children}
-    </ButtonStyled>
-  );
-};
+  as,
+}) => (
+  <ButtonStyled
+    as={as}
+    className={className}
+    name={name}
+    shape={shape}
+    size={size}
+    variant={variant}
+    onClick={onClick}
+  >
+    {children}
+  </ButtonStyled>
+);
 
 export default Button;

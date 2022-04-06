@@ -14,7 +14,7 @@ const applyVariant = (theme, variant) => {
 
         :hover {
           color: ${colors.primary};
-          background-color: ${colors.contrast};
+          background-color: transparent;
         }
       `;
 
@@ -39,31 +39,27 @@ const applySize = (theme, size) => {
 
     case 'medium':
       return css`
+        padding: .5rem 2rem;
+        font-size: ${fonts.size.normal};
+        font-weight: ${fonts.weight.bold};
       `;
 
     case 'large':
       return css`
-        width: 20rem;
+        padding: 1rem 6rem;
         font-size: ${fonts.size.large};
         font-weight: ${fonts.weight.bold};
+
+        @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile}) {
+          padding: 1rem 4rem;
+        }
+
+        @media screen and (max-width: ${({ theme }) => theme.layout.breakpoints.mobile_sm}) {
+          padding: 1rem 2rem;
+        }
       `;
   }
 };
-
-const applyShape = (theme, shape) => {
-  switch (shape) {
-
-    case 'oval':
-      return css`
-      `;
-
-    case 'square':
-      return css`
-        border-radius: 8px;
-      `;
-  }
-};
-
 
 export const ButtonStyled = styled.button`
   padding: 1rem 2rem;
@@ -76,5 +72,4 @@ export const ButtonStyled = styled.button`
 
   ${({ theme, variant }) => applyVariant(theme, variant)}
   ${({ theme, size }) => applySize(theme, size)}
-  ${({ theme, shape }) => applyShape(theme, shape)}
 `;
