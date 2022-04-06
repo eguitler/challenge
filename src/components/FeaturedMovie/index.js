@@ -3,17 +3,15 @@ import { Link } from 'react-router-dom';
 import { CLOCK, EYE } from '../../assets';
 import { durationMinToHours } from '../../utils/time';
 import { viewsToCompactFormat } from '../../utils/views';
-import Button from '../Button';
 import Overlay from '../Overlay';
 import {
   Container,
+  FeaturedMovieOverlay,
+  Genre,
   Img,
-  Title,
   Information,
   InformationWrapper,
-  Genre,
-  ViewDetailsOverlay,
-  FeaturedMovieOverlay,
+  Title,
 } from './styles';
 
 const FeaturedMovie = ({ data }) => {
@@ -23,10 +21,8 @@ const FeaturedMovie = ({ data }) => {
     name,
     genre,
     duration: minutes,
-    rating,
     views: viewsRaw,
     coverImage,
-    trailerImage,
   } = data;
 
   const views = viewsToCompactFormat(viewsRaw);
