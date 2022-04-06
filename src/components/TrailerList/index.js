@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 import TrailerCard from '../TrailerCard';
 
 
-const TrailerList = ({ trailers = [] }) => {
+const TrailerList = ({ trailers = [], isError }) => {
   const responsive = {
     320: {
       // when window width is >= 320px
@@ -34,10 +34,24 @@ const TrailerList = ({ trailers = [] }) => {
     },
   };
 
+  const sectionTitle = trailers.length > 1 ? 'Trailers' : 'Trailer';
+
+  if (isError) {
+    return (
+      <Container>
+        <Section>
+          <Title>{sectionTitle}</Title>
+          Oops! Something went wrong and this section
+          was not load correctly. Please try again.
+        </Section>
+      </Container>
+    );
+  }
+
   return (
     <Container>
-      <Section>
-        <Title>Trailers</Title>
+      <Section isError={isError}>
+        <Title>{sectionTitle}</Title>
         <Carousel
           freeMode
           breakpoints={responsive}
