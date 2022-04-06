@@ -15,7 +15,6 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
-  settings: {},
   rules: {
     'no-unused-vars': [
       'error',
@@ -38,6 +37,7 @@ module.exports = {
     'no-multiple-empty-lines': 'off',
     'linebreak-style': ['warn', 'unix'],
     'consistent-return': 'off',
+    'import/prefer-default-export': 'off',
     'react/jsx-sort-props': ['error', {
       callbacksLast: true,
       shorthandFirst: true,
