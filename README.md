@@ -4,5 +4,5 @@
 Challenge provided by Paisanos to apply as Ssr. Frontend Dev at Flixxo.
 
 ## Technologies
-`React` · `Styled Components`
+`React` · `Styled Components` · `React-Query`
 
