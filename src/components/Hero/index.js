@@ -1,26 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { durationMinToHours } from '../../utils/time';
+import { GoBack } from '../GoBack';
+import HeroImage from '../HeroImage';
+import Rating from '../Rating';
 import {
   Container,
-  Content,
   Description,
   HeroButton,
   HeroSection,
   Information,
   Title,
 } from './styles';
-import HeroImage from '../HeroImage';
-import Rating from '../Rating';
-import { durationMinToHours } from '../../utils/time';
-import Section from '../Section';
 
 /**
  * Hero used in Home and Movie pages
  */
-const Hero = ({ movie }) => {
+const Hero = ({ movie = {}, isError, goBack = '' }) => {
 
   const {
-    _id: id,
     name,
     genre,
     duration: minutes,
@@ -30,9 +27,22 @@ const Hero = ({ movie }) => {
 
   const duration = durationMinToHours(minutes);
 
+  if (isError) {
+    return (
+      <Container>
+        <HeroSection>
+          <Title>First recommendation</Title>
+          Oops! Something went wrong and this section
+          was not load correctly. Please try again.
+        </HeroSection>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <HeroSection>
+        {goBack && <GoBack to={goBack} />}
         <HeroImage alt={name} src={coverImage} />
         <Title>{name}</Title>
         <Rating value={rating} />

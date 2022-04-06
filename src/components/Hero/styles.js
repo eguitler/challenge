@@ -5,10 +5,11 @@ import Section from '../Section';
 export const Container = styled.div`
   position: relative;
   width: 100%;
+  margin-bottom: 1.5rem;
 `;
 
 export const HeroSection = styled(Section)`
-  padding-top: 10rem;
+  padding-top: 9rem;
 `;
 
 export const Title = styled.h1`
