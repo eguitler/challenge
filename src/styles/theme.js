@@ -1,8 +1,12 @@
-const theme = {
+export const theme = {
   layout: {
-    margin_sides: '16rem',
+    header_height: '80px',
     breakpoints: {
-      mobile_xl: '800px',
+      laptop_sm: '1200px',
+      tablet: '1024px',
+      tablet_sm: '850px',
+      mobile: '500px',
+      mobile_sm: '350px',
     },
   },
   colors: {
@@ -34,5 +38,3 @@ const theme = {
     },
   },
 };
-
-export default theme;
